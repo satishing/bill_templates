@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Template</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 15px;
+        }
+        .header img {
+            max-height: 60px;
+        }
+        .header .invoice-number {
+            text-align: right;
+        }
+        .header .invoice-number h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .header .invoice-number p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #777;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .section p {
+            margin: 5px 0;
+            line-height: 1.5;
+            color: #333;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .info div {
+            width: 48%;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background: #f4f4f4;
+            color: #333;
+        }
+        .totals {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .totals p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="invoice-container">
+    <div class="header">
+        <div>
+            <h3>Billed From:</h3>
+            <p>
+                Aayuv Technologies Pvt. Ltd<br>
+                Skootr Forest, Block C, RMZ Futura<br>
+                Plot No. 14 and 15, Phase 2<br>
+                HITEC City, Hyderabad, Telangana<br>
+                GSTIN NO: 36AAMCA9601N2Z6
+            </p>
+        </div>
+        <div class="invoice-number">
+            <img src="data:image/png;base64,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"></img>
+            <h2>INVOICE</h2>
+            <p>Number: EKI64901440016457222810</p>
+            <p>Date: 16 Nov, 2024</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Billed To:</h3>
+        <p>Satish Ingale</p>
+    </div>
+
+    <div class="section">
+        <h3>Order Summary:</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>TO WHOM</th>
+                <th>AGE</th>
+                <th>PACKAGE</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Bhanudas Laxman Ingale</td>
+                <td>75</td>
+                <td>Full body health check Male</td>
+                <td>1</td>
+                <td>₹20,999.00</td>
+            </tr>
+            <tr>
+                <td>Sulochana Bhanudas Ingale</td>
+                <td>68</td>
+                <td>Full body health check Female</td>
+                <td>1</td>
+                <td>₹20,999.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="totals">
+        <p>Net Amount: ₹41,998.00</p>
+        <p>Wallet Deduction: ₹0.00</p>
+        <p><strong>Total: ₹41,998.00</strong></p>
+    </div>
+
+    <div class="footer">
+        <p>Eligible for deduction u/s 80D of the Income Tax Act, 1961 for "Preventive Health Checkup" upto a limit of ₹5000 per year.</p>
+        <p>Contact us: help@ekincare.com | 040-68174274</p>
+        <p>Visit: www.ekincare.com</p>
+    </div>
+</div>
+</body>
+</html>

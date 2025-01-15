@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+        }
+
+        .bill-container {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: auto;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .bill-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bill-header h1 {
+            margin: 0;
+            /*font-size: 18px;*/
+            font-family: fantasy;
+            font-weight: bold;
+        }
+
+        .bill-header p {
+            margin: 2px 0;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .bill-items {
+            margin-bottom: 5px;
+        }
+
+        .bill-details p {
+            margin: 2px 0;
+            font-size: 12px;
+        }
+
+        .details,.summary {
+            display: flex;
+            justify-content: space-between;
+            margin: 1px 0;
+            font-size: 12px;
+            line-height: 1;
+        }
+        .details .section-left{
+            width: 48%;
+            text-align: left;
+        }
+
+        .details .section-right {
+            width: 48%;
+            text-align: right;
+        }
+
+        .summary .summary-left{
+            width: 48%;
+            text-align: left;
+        }
+
+        .summary .summary-right {
+            width: 48%;
+            text-align: right;
+        }
+
+        .summary-net {
+            text-align: right;
+            line-height: 0.5;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .bill-items table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bill-items thead {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bill-items th, .bill-items td {
+            font-size: 12px;
+            text-align: left;
+            padding: 5px;
+            border-bottom: 0px solid #ccc;
+        }
+
+        .bill-items th {
+            font-weight: bold;
+        }
+
+        .bill-totals p {
+            font-size: 12px;
+            margin: 1px 0;
+        }
+
+        .terms {
+            font-size: 12px;
+            line-height: 0.5;
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+        .text-right {
+            text-align: right;
+        }
+
+        .bold {
+            font-weight: bold;
+            line-height: 0;
+        }
+        .software {
+            font-size: 8px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="bill-container">
+    <div class="bill-header">
+        <h1>Orange</h1>
+        <p>22, Saraswati Vilas Bldg., Laxmi Road</p>
+        <p><strong>Phone No: 020-29803115</strong></p>
+        <p>GSTIN: 27AAXPM9655L1ZI</p>
+        <p>CASH INVOICE</p>
+        <p><strong>Bill No.: 2500005412</strong></p>
+    </div>
+
+    <div class="details">
+        <div class="section-left">
+            <p><span class="bold">Date:</span> 13/10/24</p>
+            <p><span class="bold">POS:</span> MAHARASHTRA</p>
+            <p><span class="bold">Name:</span> Satish Ingale</p>
+            <p><span class="bold">Mob. No.:</span> 9561124122</p>
+        </div>
+        <div class="section-right">
+            <p><span class="bold">Time:</span> 03:27:PM</p>
+            <p><span class="bold">State Code:</span> 27</p>
+        </div>
+    </div>
+
+    <hr>
+    <div class="bill-items">
+        <table>
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Rate</th>
+                <th>Qty</th>
+                <th >Amount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Zodiac Barboni Full Sleeve Shirt</td>
+                <td>4299.00</td>
+                <td>1</td>
+                <td>4299.00</td>
+            </tr>
+            <tr>
+                <td>Feench Crown Regal Blue Shirt</td>
+                <td>3195.00</td>
+                <td>1</td>
+                <td>3195.00</td>
+            </tr>
+            <tr>
+                <td>Rare Rabbit Cotton Plain Shirt</td>
+                <td>1899.00</td>
+                <td>1</td>
+                <td>1899.00</td>
+            </tr>
+            <tr>
+                <td>Levis Mens Straight Fit Jeans</td>
+                <td>2999.00</td>
+                <td>1</td>
+                <td>2999.00</td>
+            </tr>
+            <tr>
+                <td>Levis Mens Heavy Fade Stretchable Jeans</td>
+                <td>3199.00</td>
+                <td>1</td>
+                <td>3199.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="summary">
+        <div class="summary-left">
+            <p>Items: 5</p>
+            <p>Qty: 5</p>
+        </div>
+        <div class="summary-right">
+            <p>Total: 15591.00</p>
+        </div>
+    </div>
+    <div class="summary-net">
+        <p>NET: 15591.00</p>
+    </div>
+    <hr>
+    <div class="summary">
+        <div class="summary-left">Mode of Payments: UPI</div>
+        <div class="summary-right">15591.00</div>
+    </div>
+    <hr>
+    <div class="summary">The invoice include all taxes.</div>
+    <hr>
+    <div class="summary">
+        Declaration:<br>We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct.
+    </div>
+    <hr>
+
+    <div class="bill-items">
+        <table>
+            <thead>
+            <tr>
+                <th>GST</th>
+                <th>Taxable</th>
+                <th>CGST</th>
+                <th>SGST</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#12.00%</td>
+                <td>13720.80</td>
+                <td>935.40</td>
+                <td>935.40</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>935.40</td>
+                <td>935.40</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="terms">
+        <p class="text-left bold">Terms & Conditions:</p>
+        <p>* No Refund</p>
+        <p>* Exchange Within 7 days.</p>
+        <p>* Exchange between 2 PM to 4 PM.</p>
+        <p>* No Exchange on Saturday & Sunday.</p>
+        <p>* No Exchange without Barcode and Invoice.</p>
+    </div>
+    <hr>
+    <div class="details">
+        <div><p class="text-left">Counter No: 1</p></div>
+        <div><p class="text-right">Cashier: Admin</p></div>
+    </div>
+    <div class="software">Software by Retailware-9890002875</div>
+</div>
+</body>
+</html>

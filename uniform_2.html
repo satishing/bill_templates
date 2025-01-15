@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniform Bill</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px;
+            line-height: 0.5;
+            padding: 10;
+            background: white;
+            width: 450px;
+            background-image: url("./images/backgroud.png");
+        }
+        .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 20px;
+        }
+
+        .center {
+            text-align: center;
+            font-size: small;
+        }
+
+        .invoice {
+            display: flex;
+            font-size: small;
+            margin: 5px;
+        }
+        
+        .invoice .invoice-left  {
+            width: 50%;
+            text-align: left;
+        }
+
+        .invoice .invoice-right  {
+            width: 50%;
+            text-align: right;
+        }
+
+        .customer {
+            text-align: left;
+            font-size: small;
+        } 
+
+        .bill-items table {
+            width: 100%;
+            border-collapse: collapse;
+            line-height: 1;
+            text-wrap: wrap;
+            padding-top: 5px;
+        }
+
+        .bill-items thead {
+            border-bottom: 1px solid #ccc;
+            line-height: 1;
+        }
+
+        .bill-items th, .bill-items td {
+            font-size: small;
+            text-align: left;
+            padding: 5px;
+            border-bottom: 0px solid #ccc;
+        }
+
+        .bill-items th {
+            font-weight: bold;
+        }
+
+        .bill-items .text-left {
+            text-align: left;
+        }
+
+        .bill-items .text-center {
+            text-align: center;
+        }
+
+        .bill-items .text-right {
+            text-align: right;
+        }
+
+        .bill-summary {
+            display: flex;
+            font-size: small;
+            margin: 5px;
+        }
+    
+        .bill-summary .bill-left  {
+            width: 33%;
+            text-align: left;
+        }
+
+        .bill-summary .bill-center  {
+            width: 33%;
+            text-align: center;
+        }
+
+        .bill-summary .bill-right  {
+            width: 33%;
+            text-align: right;  
+        }
+
+        .table-container {
+            width: 95%; /* Adjust the width as needed */
+            margin: 5px auto; /* Center the box */
+            padding: 5px;
+            border: 1px solid #ccc; /* Border around the box */
+            font-size: small;
+        }
+
+        .table-container table {
+            border-collapse: collapse;
+            line-height: 1;
+            text-wrap: wrap; 
+            text-align: center;   
+            width: 100%;
+            table-layout: fixed; /* Ensures columns are fixed in width */    
+        }
+
+        .table-container th, .table-container td {
+            font-size: small;
+            padding: 2px;
+            border-bottom: 0px solid #ccc;
+        }
+
+        .table-container th {
+            font-weight: bold;
+        }
+        .table-container tfoot {
+            border-top: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        .footer {
+            font-size: x-small;
+            text-align: center;
+        }
+        .note {
+            font-size: x-small;
+            
+        }
+
+    </style>
+</head> 
+<body>
+    <div>
+        <div class="header">
+            <h1>Niddeshwaram Avenue LLP</h1>
+            <h1>( Wagholi )</h1>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <p>C/O, Men$-Avenue,Survey No.634 Sai Ganga,Pune</p>
+            <p>Nagar Road, Near ICICI Bank Ltd.Wagholi,Pune</p>
+            <p>-412207 Phone 8378887222/0</p>
+            <p>GSTIN: 27AAJFN9658E1ZS</p>
+        </div>
+
+        <div class="header">
+            <h1>TAX INVOICE</h1>
+        </div>
+
+        <hr>
+
+        <div class="invoice">
+            <div class="invoice-left">
+                <p><strong>BILL NO</strong> : MA/24-252031</p>
+                <p><strong>Counter No</strong> : NA 87</p>
+                <p><strong>User</strong> : PRAVIN</p>
+            </div>
+            <div class="invoice-right">
+                <p><strong>Date</strong> : 09 Jun 2024</p>
+                <p><strong>Time</strong> : 03:50PM</p>
+                <p><strong>Salesman</strong> : 1651</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <div class="customer">
+                <p><strong>Customer</strong> : SATISH </p>
+                <p><strong>Address</strong> : NA </p>
+                <p><strong>Phone</strong> : 9561124122 </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="bill-items">
+            <table>
+                <thead>
+                  <tr>
+                    <th class="text-left">Barcode</th>
+                    <th class="text-left">Particulars</th>
+                    <th class="text-left">HSN</th>
+                    <th class="text-center">Qty</th>
+                    <th class="text-right">Rate</th>
+                    <th class="text-right">Disc.</th>
+                    <th class="text-right">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">80101063</td>
+                    <td class="text-left">Nobelo Classic Trouser</td>
+                    <td class="text-left">6203</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">1699.00</td>
+                    <td class="text-right">169.90</td>
+                    <td class="text-right">1529.10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">80101143</td>
+                    <td class="text-left">Nobelo Straight Fit Trouser</td>
+                    <td class="text-left">6203</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">1899.00</td>
+                    <td class="text-right">189.90</td>
+                    <td class="text-right">1709.10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">90871665</td>
+                    <td class="text-left">Jilax Pant</td>
+                    <td class="text-left">6103</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">999.00</td>
+                    <td class="text-right">00.00</td>
+                    <td class="text-right">999.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">90100076</td>
+                    <td class="text-left">StyleCast Jacket</td>
+                    <td class="text-left">6103</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">2500.00</td>
+                    <td class="text-right">00.00</td>
+                    <td class="text-right">2500.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">90001865</td>
+                    <td class="text-left">Essentials T-Shirt</td>
+                    <td class="text-left">6109</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">899.00</td>
+                    <td class="text-right">00.00</td>
+                    <td class="text-right">899.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">90001866</td>
+                    <td class="text-left">Essentials T-Shirt</td>
+                    <td class="text-left">6109</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">899.00</td>
+                    <td class="text-right">00.00</td>
+                    <td class="text-right">899.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">90002890</td>
+                    <td class="text-left">Essentials T-Shirt</td>
+                    <td class="text-left">6109</td>
+                    <td class="text-center">1</td>
+                    <td class="text-right">1099.00</td>
+                    <td class="text-right">00.00</td>
+                    <td class="text-right">1099.00</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="bill-summary">
+            <div class="bill-left">Items<strong> 7 </strong></div>
+            <div class="bill-center">Qty<strong> 7 </strong></div>
+            <div class="bill-right">Total<strong> 9634.20 </strong></div>
+        </div>
+
+        <hr>
+
+        <div class="invoice">
+            <div class="invoice-left">
+                <p><strong>Total Amount</strong></p>
+                <p><strong>Discount Amount</strong></p>
+                <p><strong>Paid Amount</strong>(Round off)</p>
+                <p><strong>Net Amount</strong>(Round off)</p>
+            </div>
+            <div class="invoice-right">
+                <p><strong>9634.20</strong></p>
+                <p><strong>359.80</strong></p>
+                <p><strong>9634.00</strong></p>
+                <p><strong>9634.00</strong></p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <p>GST Summary</p>
+            <hr>
+            <table>
+                <thrad>
+                    <tr>    
+                        <th>Description</th>
+                        <th>Taxable</th>
+                        <th>CGST</th>
+                        <th>SCST</th>
+                    </tr>
+                </thrad>
+                <tbody>
+                    <tr>
+                        <td>GST 5%</td>
+                        <td>2797.00</td>
+                        <td>119.92</td>
+                        <td>119.92</td>
+                    </tr>
+                    <tr>
+                        <td>GST 12%</td>
+                        <td>6837.20</td>
+                        <td>410.23</td>
+                        <td>410.23</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td>9634.20</td>
+                        <td>530.15</td>
+                        <td>530.15</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="invoice">
+            <div class="invoice-left">
+                <p>Cheque : 9634.00</p>
+                <p>Cheque No. :  NA</p>
+            </div>
+            <div class="invoice-right">
+                <p>Cheque Date : 09 Jun 2024</p>
+                <p>Bank : NA</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="note">
+            <p><strong>Remark</strong></p>
+            <p><strong>Your Saving : 359.80 </strong></p>
+            <p>No exchange no retturn on sales goods.</p>
+            <p>Thank you for shopping with us.</p>
+            <p>Please visit again.</p>
+        </div>
+
+        <hr>
+        <div class="footer"><p>*** Have a nice day ***</p></div>
+
+        <div class="footer">
+            <p>09 Jun 2024, 03:50PM</p>
+            <p>Software By LNB Infotech - 09370716836</p>
+        </div>
+    </div>
+</body>    
+
+</html>

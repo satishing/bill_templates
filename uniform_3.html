@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill</title>
+  <style>
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      max-width: 8cm; /* Adjusted width */
+      font-size: 10px; /* Adjusted font size */
+    }
+
+    #bill-container {
+      border: 1px transparent #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: x-large;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 10px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 10px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    th {
+      padding: 5px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      font-size: 10px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    td {
+      padding:2px;
+      text-align: left;
+      border-bottom: 0px solid #ddd;
+      font-size: 10px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .total {
+      font-weight: normal;
+      font-size: 10px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 10px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    ul {
+      font-size: 0.7em;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .gst-details {
+      text-align: right;
+      margin-top: 20px; 
+    }
+
+    .center-align {
+      text-align: center;
+    }
+
+    .right-align {
+      text-align: right;
+    }
+
+    .bill-table {
+      table-layout: fixed;
+    }
+
+    .bill-table tfoot{
+      border-top: 1px solid #ddd;
+    }
+
+    .head-table {
+      table-layout: fixed;
+      padding: 2px 0;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 10px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border: none;
+    }
+
+    .head-table td {
+      border-bottom: 0px solid #ddd;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="bill-container">
+
+    <!-- Header Div -->
+    <div class="center-align">
+      <h1>Satyanarayan Cloth Stores</h1>
+      <p style="font-size:12px">Balaji Heights, Opposite Life Line Hospital, Wagholi, Pune, Maharashtra 412207</p>
+      <p style="font-size:12px"> +91 80809 68606 https://satyanarayanclothstores.com</p>
+      <p style="font-size:12px"> GSTIN: 27AAOPA8983C1ZH</p>
+    </div>
+    <hr>
+    <!-- Purchase Table Div -->
+    <table class="head-table">
+      <tr>
+        <td class="left-align"><strong>Invoice ID</strong> I2024009832</td>
+        <td  class="right-align"><strong>Date:</strong> 07/04/2024</td>
+      </tr>
+      <tr>
+        <td class="left-align"><strong>Name</strong> Satish Ingale</td>
+        <td class="right-align"><strong>Mobile</strong> +91 9561124122</td>
+      </tr>
+    </table>
+    <hr>
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th class="left-align">Description</th>
+          <th class="right-align">Qty</th>
+          <th class="right-align">Price</th>
+          <th class="right-align">Discount</th>
+          <th class="right-align">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left-align">Killer Blue</td>
+          <td class="right-align">1</td>
+          <td class="right-align">3599.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">3599.20</td>
+        </tr>
+        <tr>
+          <td class="left-align">Flying Machine</td>
+          <td class="right-align">1</td>
+          <td class="right-align">2799</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">2799.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">CP Bro Polo Neck</td>
+          <td class="right-align">1</td>
+          <td class="right-align">1250.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">1250.00</td>
+        </tr>
+        <tr>
+            <td class="left-align">Golf Leisure</td>
+            <td class="right-align">1</td>
+            <td class="right-align">899.00</td>
+            <td class="right-align">00.00</td>
+            <td class="right-align">899.00</td>
+          </tr>
+        <tr>
+          <td class="left-align">LP Stripped</td>
+          <td class="right-align">1</td>
+          <td class="right-align">999.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">1799.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">MV02 Jockey Gray</td>
+          <td class="right-align">1</td>
+          <td class="right-align">1499.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">1499.00</td>
+        </tr> 
+        <tr>
+          <td class="left-align">Allen Solly Solid Cut</td>
+          <td class="right-align">2</td>
+          <td class="right-align">1290.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">2580.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">India Garage Checked</td>
+          <td class="right-align">1</td>
+          <td class="right-align">1489.00</td>
+          <td class="right-align">00.00</td>
+          <td class="right-align">1489.00</td>
+        </tr>
+                <!-- Add more rows as needed -->
+      </tbody>  
+      <tfoot>
+        <tr>
+          <td class="left-align"><strong>Total</strong></td>
+          <td class="right-align"><strong>9</strong></td>
+          <td class="right-align"><strong></strong></td>
+          <td class="right-align"><strong>00.00</strong></td>
+          <td class="right-align"><strong>14914.00</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th class="left-align">Taxable</td>
+          <th class="left-align">CGST</th>
+          <th class="left-align">SGST</th>
+          <th class="left-align">GST</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="right-align">13124.32</td>
+          <td class="right-align">894.84 (6%)</td>
+          <td class="right-align">894.84 (6%)</td>
+          <td class="right-align">1789.68</td>
+        </tr>
+        <tfoot>
+          <tr>
+            <td class="right-align"><strong></strong></td>
+            <td class="right-align"><strong>894.84</strong></td>
+            <td class="right-align"><strong>894.84</strong></td>
+            <td class="right-align"><strong>1789.68</strong></td>
+          </tr>
+        </tfoot>
+      </tbody>
+      
+    </table>
+
+    <!-- GST Calculations Div -->
+    <div class="gst-details right-align">
+      <span>Taxable Amount: ₹ 13124.32</span>
+      <br>  
+      <span>Total GST: ₹ 1789.68</span>
+      <br>
+      <span>Discount: (-)₹ 00.00</span>
+      <br>  
+      <span>Total Amount: ₹ 14914.00</span>
+      <br>
+      <strong>Total  (Round off): 14914.00</strong>
+    </div>
+    <hr>
+    <strong>Toral: Fourteen Thousand Nine Hunndred Fourteen Only</strong>
+    <!-- Additional Line above "Terms and Conditions" -->
+    <hr>
+
+    <!-- Footer Div -->
+    <div id="footer">
+      <p class="center-align">Thank you! Visit again.</p>
+      <p><strong>Terms & Conditions</strong></p>
+      <ul>
+        <li>All purchases are considered final. Clothing items can only be returned or exchanged if there is a manufacturing defect or an incorrect item is delivered.</li>
+        <li>Before completing your purchase, carefully review the size, color, and design of the clothing items.</li>
+        <li>If you encounter any problems with your order, please reach out to our customer support within 7 days of receiving the product.</li>
+        <li>Once a sale is made, items will not be accepted for return unless there is a valid reason in accordance with our return policy.</li>
+    </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .details .section {
+            width: 48%;
+        }
+        .section h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        thead {
+            display: none; /* Hide table headers for mobile-friendly layout */
+        }
+
+        tbody tr {
+            display: flex;
+            flex-wrap: wrap; /* Allow content to wrap to multiple lines */
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        tbody td {
+            display: block; /* Stack cells vertically */
+            width: 50%; /* Adjust width per your needs */
+            padding: 5px 0;
+            text-align: left;
+        }
+
+        tbody td::before {
+            content: attr(data-label); /* Use the `data-label` attribute as a label */
+            font-weight: bold;
+            display: inline-block;
+            width: 100px; /* Label width */
+        }
+
+        @media (min-width: 600px) {
+            thead {
+                display: table-header-group; /* Show headers on larger screens */
+            }
+
+            tbody tr {
+                display: table-row; /* Normal table layout for larger screens */
+            }
+
+            tbody td {
+                display: table-cell; /* Normal table cell layout */
+                width: auto;
+            }
+
+            tbody td::before {
+                content: ""; /* Hide pseudo-labels on larger screens */
+                display: none;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="invoice-container">
+    <div class="header">
+        <h1>Akshardhara Book Gallery</h1>
+        <p>1302, Sanas Plaza, Bajirao Rd, near Atre Hall,</p>
+        <p>Subhash Nagar, Shukrawar Peth, Pune, Maharashtra 411002</p>
+        <p>Contact: 020 2444 1001</p>
+    </div>
+    <hr>
+    <div class="details">
+        <div class="section">
+            <h2>Buyer Details</h2>
+            <p><strong>Satish Ingale</strong></p>
+            <p>Pune</p>
+        </div>
+        <div class="section">
+            <h2>Invoice Details</h2>
+            <p>Invoice Number: <strong>INV-8743</strong></p>
+            <p>Invoice Date: <strong>27.07.2024</strong></p>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>Book Details</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Book Title</th>
+                <th>Price (INR)</th>
+                <th>Discount (%)</th>
+                <th>Discount Amount (INR)</th>
+                <th>Net Price (INR)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Urmila, Marathi Novel</td>
+                <td>950</td>
+                <td>15%</td>
+                <td>142.50</td>
+                <td>807.50</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mrutyunjay</td>
+                <td>1200</td>
+                <td>10%</td>
+                <td>120.00</td>
+                <td>1080.00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Yayati</td>
+                <td>800</td>
+                <td>20%</td>
+                <td>160.00</td>
+                <td>640.00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sambhaji</td>
+                <td>1000</td>
+                <td>25%</td>
+                <td>250.00</td>
+                <td>750.00</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Madarya</td>
+                <td>600</td>
+                <td>10%</td>
+                <td>60.00</td>
+                <td>540.00</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Sukhacha Shodh</td>
+                <td>550</td>
+                <td>15%</td>
+                <td>82.50</td>
+                <td>467.50</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>College</td>
+                <td>700</td>
+                <td>20%</td>
+                <td>140.00</td>
+                <td>560.00</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Radha Marathi Novel</td>
+                <td>900</td>
+                <td>15%</td>
+                <td>135.00</td>
+                <td>765.00</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="5"><strong>Total Payable (INR)</strong></td>
+                <td><strong>5680.00</strong></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="footer">
+        <p>Terms & Conditions:</p>
+        <p>1. Books once sold cannot be returned.</p>
+        <p>2. Please retain the invoice for future reference.</p>
+        <p>3. Payments via cash, UPI, or card are accepted.</p>
+    </div>
+</div>
+</body>
+</html>

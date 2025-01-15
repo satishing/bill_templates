@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .invoice-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #444;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #444;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .details {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .details pre {
+            margin: 5px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+        .amount {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            margin-right: 60px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="invoice-container">
+    <div class="header">
+        <img src="data:image/png;base64,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"></img>
+
+        <h1>Ruby Medical Services</h1>
+        <p><i><b>The Diagnostic Tool of the 21st Century</b></i></p>
+        <p>Gate no. 647, Opp Lifeline Hospital, Nagar Rd, behind Satyanarayan cloth store, Wagholi, Pune, Maharashtra 412207</p>
+    </div>
+
+    <div class="section">
+        <h3>Invoice Details</h3>
+        <div class="details">
+            <pre>Invoice Number: INV-24-015617                 GSTIN: 27AAXPG6774A2ZC</pre>
+            <pre>Date: 06 July 2024                             Appointment: 10:00 AM</pre>
+            <pre>Patient: Satish Ingale (Male, 40)</pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Services</h3>
+        <div class="details">
+            <pre>1. RMS Comprehensive Health Package: Male                   ₹5599.00</pre>
+        </div>
+    </div>
+
+    <div class="amount">
+        <pre>  Total ₹5,599.00</pre>
+    </div>
+
+    <div class="footer">
+        <p>For Appointment Call directly at: +91 8956022355, +91 8956022356</p>
+        <p>Email: rmswagholi@gmail.com, rubymedicalserviceswagholi123@gmail.com</p>
+        <p>Thank you for choosing Ruby Medical Services. We look forward to serving you again.</p>
+        <p>This invoice is eligible for deduction u/s 80D of the Income Tax Act, 1961, for "Preventive Health Checkup" up to a limit of ₹5,000 per year.</p>
+    </div>
+</div>
+</body>
+</html>

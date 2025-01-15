@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      max-width: 18cm; /* Adjusted width */
+      font-size: 10px; /* Adjusted font size */
+    }
+
+    #bill-container {
+      border: 1px transparent #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: x-large;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    th {
+      padding: 5px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      font-size: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    td {
+      padding:2px;
+      text-align: left;
+      border-bottom: 0px solid #ddd;
+      font-size: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .total {
+      font-weight: normal;
+      font-size: 10px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul {
+      font-size: 0.7em;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .gst-details {
+      text-align: right;
+      margin-top: 20px; 
+    }
+
+    .center-align {
+      text-align: center;
+    }
+
+    .right-align {
+      text-align: right;
+    }
+
+    .bill-table {
+      table-layout: fixed;
+    }
+
+    .bill-table tfoot{
+      border-top: 1px solid #ddd;
+    }
+
+    .head-table {
+      table-layout: fixed;
+      padding: 2px 0;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border: none;
+    }
+
+    .head-table td {
+      border-bottom: 0px solid #ddd;
+    }
+
+    .rotate-image {
+      transform: rotate(270deg);
+      width: 50px;
+      height: 150px;
+      margin-bottom: -10%;
+    }
+  </style>
+</head>
+<body>
+  <div id="bill-container">
+
+    <!-- Header Div -->
+    <div class="center-align">
+      <img class="rotate-image" src="images/bc.png" alt="Branded Collection Logo">
+      <h1>Branded Collection</h1>
+      <p style="font-size:12px">Beside Care Hospital, Avhalwadi Chowk, Wagholi, Pune, Maharashtra 412207</p>
+      <p style="font-size:12px"> &#9743; +91 8108335642/+91 8109093232 GSTIN: 27DETPP2267A1Z9</p>
+    </div>
+    <hr>
+    <!-- Purchase Table Div -->
+    <table class="head-table">
+      <tr>
+        <td class="left-align"><strong>Customer Name:</strong> Satish Ingale</td>
+        <td class="right-align"><strong>Mobile Number:</strong> 09561124122</td>
+      </tr>
+      <tr>
+        <td class="left-align"><strong>E-mail:</strong> satishing@gmail.com</td>
+      </tr>
+      <tr>
+        <td class="left-align"><strong>Invoice Number:</strong> IN0724-0027</td>
+        <td  class="right-align"><strong>Date:</strong> 01/07/2024</td>
+      </tr>
+    </table>
+    <hr>
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th class="left-align">Items</th>
+          <th class="right-align">Qty</th>
+          <th class="right-align">Price</th>
+          <th class="right-align">Discount</th>
+          <th class="right-align">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left-align">Heavy Crew Combo</td>
+          <td class="right-align">5</td>
+          <td class="right-align">499.00</td>
+          <td class="right-align">998.00</td>
+          <td class="right-align">1497.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">Park Avenue Men's Formal Shirt</td>
+          <td class="right-align">1</td>
+          <td class="right-align">1299.00</td>
+          <td class="right-align">99.00</td>
+          <td class="right-align">1200.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">Pistachio Green Formal Shirt</td>
+          <td class="right-align">1</td>
+          <td class="right-align">1500.00</td>
+          <td class="right-align">200.00</td>
+          <td class="right-align">1300.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">Ivory Back Print Short</td>
+          <td class="right-align">1</td>
+          <td class="right-align">799.00</td>
+          <td class="right-align">199.00</td>
+          <td class="right-align">600.00</td>
+        </tr>
+        <tr>
+          <td class="left-align">Louis Philippe Men's Classic </td>
+          <td class="right-align">1</td>
+          <td class="right-align">1999.00</td>
+          <td class="right-align">99.00</td>
+          <td class="right-align">1900.00</td>
+        </tr> 
+                <!-- Add more rows as needed -->
+      </tbody>  
+      <tfoot>
+        <tr>
+          <td class="left-align"><strong>Total</strong></td>
+          <td class="right-align"><strong>9</strong></td>
+          <td class="right-align"><strong></strong></td>
+          <td class="right-align"><strong>1595.00</strong></td>
+          <td class="right-align"><strong>6497.00</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th class="left-align">Taxable Amount</td>
+          <th class="left-align">CGST</th>
+          <th class="left-align">SGST</th>
+          <th class="left-align">GST</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="right-align">6497.00</td>
+          <td class="right-align">389.82 (6%)</td>
+          <td class="right-align">389.82 (6%)</td>
+          <td class="right-align">779.64</td>
+        </tr>
+        <tfoot>
+          <tr>
+            <td class="right-align"><strong></strong></td>
+            <td class="right-align"><strong>389.82</strong></td>
+            <td class="right-align"><strong>389.82</strong></td>
+            <td class="right-align"><strong>779.64</strong></td>
+          </tr>
+        </tfoot>
+      </tbody>
+      
+    </table>
+
+    <!-- GST Calculations Div -->
+    <div class="gst-details right-align">
+      <br>
+      <span>Subtotal: ₹ 8092.00</span>
+      <br>
+      <span>Total Discount: -₹ 1595.00</span>
+      <br>
+      <span>CGST: ₹ 389.82</span>
+      <br>
+      <span>SGST: ₹ 389.82</span>
+      <br>  
+      <span>Total GST: ₹ 779.64</span>
+      <br>
+      <span>Total Amount (including GST): ₹ 7276.64</span>
+      <br>
+      <strong>Total Amount (Round off): ₹ 7277.00</strong>
+    </div>
+
+    <!-- Additional Line above "Terms and Conditions" -->
+    <hr>
+
+    <!-- Footer Div -->
+    <div id="footer">
+      <p class="center-align">Thank you for shopping with us! Visit again. &#128591;  </p>
+      <p><strong>Terms and Conditions:</strong></p>
+      <ul>
+        <li>All sales are final. We do not accept returns or exchanges for clothing items unless there is a manufacturing defect or the wrong item is delivered.</li>
+        <li>Please check the size, color, and design of the clothing items before making a purchase.</li>
+        <li>In case of any issues with your order, kindly contact our customer support within 7 days of receiving the product.</li>
+        <li>Goods once sold will not be taken back unless there is a valid reason as per our return policy.</li>
+      </ul>
+    </div>
+    <br>
+      <span style="font-size:8px">This is electronically generated invoice on 01/07/2024, 11:26 </span>
+  </div>
+</body>
+</html>
